@@ -4,13 +4,12 @@ from openai import OpenAI
 # =========================
 # 1. API 配置
 # =========================
-API_KEY = "你的新DeepSeek_API_Key".strip()
+API_KEY = st.secrets["DEEPSEEK_API_KEY"]
 
 client = OpenAI(
-    api_key="",
+    api_key=API_KEY,
     base_url="https://api.deepseek.com"
 )
-
 # =========================
 # 2. 页面设置
 # =========================
